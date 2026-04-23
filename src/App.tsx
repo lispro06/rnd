@@ -1007,58 +1007,6 @@ export default function App() {
         <ChevronRight size={24} className="-rotate-90 group-hover:scale-125 transition-transform" />
       </button>
 
-      {/* Right Quick Menu (Floating) */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-2 z-40 pr-4">
-        {['인기사업', '자료실', '공지사항', '전문가보기', '컨설팅 신청', '사업계획서 리뷰', '묻고 답하기'].map((item) => {
-          if (item === '묻고 답하기') {
-            return (
-              <Link to="/qna" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          if (item === '컨설팅 신청') {
-            return (
-              <Link to="/consulting" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          if (item === '사업계획서 리뷰') {
-            return (
-              <Link to="/review" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          if (item === '합격사업계획서') {
-            return (
-              <Link to="/success-plans" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          if (item === '자료실') {
-            return (
-              <Link to="/archive" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          if (item === '공지사항') {
-            return (
-              <Link to="/notice" key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap text-center">
-                {item}
-              </Link>
-            )
-          }
-          return (
-            <div key={item} className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-[11px] font-bold text-gray-600 hover:bg-blue-600 hover:text-white transition-all cursor-pointer whitespace-nowrap">
-              {item}
-            </div>
-          )
-        })}
-      </div>
     </div>
   );
 }
